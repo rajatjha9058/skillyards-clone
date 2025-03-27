@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        details summary {
+            background-color: white;
+            transition: background-color 0.3s;
+        }
+        details[open] summary {
+            background-color: #FEF08A;
+        }
+    </style>
+</head>
+<body class="bg-white p-10">
+    <div class="max-w-5xl mx-auto">  <!-- Increased width -->
+        <h2 class="text-2xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+        <div class="border-b-4 border-yellow-500 w-16 mx-auto mb-6"></div>
+        
+        <div class="grid grid-cols-2 gap-3 items-start">  <!-- Increased gap -->
+            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base flex-auto">  <!-- Increased padding and shadow -->
+                <details class="group">
+                    <summary class="font-semibold  cursor-pointer flex justify-between items-center p-3 rounded">
+                        How is the Skillyards On-The Job BCA Degree Program different from traditional BCA degrees?
+                        <span class="group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        Skillyards On-The Job BCA Degree Program is different in many ways than the traditional BCA, such as practical training on client projects, unlike theory-based classroom training. Additionally, students work as Software Developer Interns with a monthly stipend of up to 15000. Upon completing their internship, they get a 100% guaranteed in-house placement with a package of up to 10 LPA as a Software Developer before graduation.
+                    </p>
+                </details>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base flex-auto">
+                <details class="group">
+                    <summary class="font-semibold  cursor-pointer flex justify-between items-center p-3 rounded">
+                        Are there any scholarship opportunities available?
+                        <span class="group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        Students get a scholarship of up to 70% based on their practical knowledge to help them easily pay the fees.
+                    </p>
+                </details>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base w-full">
+                <details class="group">
+                    <summary class="font-semibold  cursor-pointer flex justify-between items-center p-3 rounded">
+                        Is EMI available in the On-The Job BCA Degree Program?
+                        <span class="group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        Yes, the On-The-Job BCA Program offers an EMI option so that students won’t feel pressured to pay the program fees all at once.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

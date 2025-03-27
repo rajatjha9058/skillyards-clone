@@ -1,0 +1,403 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/contect.css">
+    <title></title>
+    <link rel="stylesheet" href="assets/bcadegree.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+
+        
+        details[open] summary {
+            background-color: #FEF08A;
+        }
+    
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800">Skillyards</h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Study</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">OJT</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact</a></li>
+            </ul>
+        </nav>
+    </header> -->
+    <header class="bg-gray-800 text-white py-1 px-4">
+        <div class="container mx-auto flex justify-end items-center space-x-4 text-sm">
+            <a href="#" class="hover:text-yellow-400 transition duration-300">Verify Certificate</a>
+            <a href="#" class="hover:text-yellow-400 transition duration-300">Download Brochure</a>
+            <a href="#" class="hover:text-yellow-400 transition duration-300">Aptitude Test</a>
+            <a href="tel:+917060100562" class="hover:text-yellow-400 transition duration-300">
+                <i class="fas fa-phone-alt text-yellow-400 mr-1"></i> +91 7060100562
+            </a>
+            <a href="mailto:info@skillyards.com" class="hover:text-yellow-400 transition duration-300">
+                <i class="fas fa-envelope text-yellow-400 mr-1"></i> info@skillyards.com
+            </a>
+        </div>
+    </header>
+
+    <nav class="bg-white py-3 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="front_weblogo.webp" alt="Skillyards Logo" class="h-12">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Study
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <div class="relative group">
+                    <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 flex items-center relative">
+                        OJT <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md w-48 mt-1 py-2 animate-fade-in transition duration-200 ease-in-out transform origin-top scale-95 group-hover:scale-100">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">OJT Option 1</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">OJT Option 2</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 flex items-center relative">
+                        OJD <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md w-48 mt-1 py-2 animate-fade-in transition duration-200 ease-in-out transform origin-top scale-95 group-hover:scale-100">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">OJD Option 1</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">OJD Option 2</a>
+                    </div>
+                </div>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Club Facilitation
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Blogs
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Team
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    About us
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Contact us
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="font-medium hover:text-yellow-500 transition duration-300 relative group">
+                    Assignment
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden rounded-md p-2 hover:bg-gray-100 focus:outline-none transition duration-300" id="mobile-menu-button">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    
+    <section class=" bg-cover bg-center h-96  flex items-center justify-center  " style="background-image: url('assets/1banner.webp');">
+        <div class="   p-8 text-white text-center rounded-lg">
+            <h2 class="text-3xl font-extrabold">BCA Degree Program In Agra</h2>
+        </div>
+    </section>
+
+
+
+
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">BCA Program</h2>
+        <div class="flex justify-center">
+            <div class="w-20 h-1 bg-yellow-500 mb-12"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden h-auto min-h-[600px]">
+                <img src="assets/programming-background-collage_10_11zon.webp" alt="BCA 1st Semester" class="w-full h-64 object-cover">
+                <div class="p-8 space-y-6">
+                    <h3 class="text-lg font-semibold ">BCA 1st Semester</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-4  text-xs">
+                        <li>Fundamentals of Computer & Operations</li>
+                        <li>Creative English</li>
+                        <li>Basic Introduction of Network</li>
+                        <li>System Architecture</li>
+                        <li>Introduction of the C, C++ Programming Language</li>
+                        <li>Introduction & Basics of SEO</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden h-auto min-h-[600px]">
+                <img src="assets/programming-background-collage (8)_9_11zon.webp" alt="BCA 2nd Semester" class="w-full h-64 object-cover">
+                <div class="p-8 space-y-6">
+                    <h3 class="text-lg font-semibold">BCA 2nd Semester</h3>
+                    <p class="text-gray-500 text-sm">Data Structures and Algorithms</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-4 text-xs">
+                        <li>C, C++ Practice</li>
+                        <li>Introduction of the Python programming language</li>
+                        <li>Python Project</li>
+                        <li>Black & Grey Hat SEO</li>
+                        <li>Assignment + Exam</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden h-auto min-h-[600px]">
+                <img src="assets/programming-background-collage (7)_8_11zon.webp" alt="BCA 3rd Semester" class="w-full h-64 object-cover">
+                <div class="p-8 space-y-6  ">
+                    <h3 class="text-lg  font-semibold">BCA 3rd Semester</h3>
+                    <ul class="list-disc  list-inside text-gray-600 text-sm space-y-4 text-xs">
+                        <li>HTML / HTML5</li>
+                        <li>CSS / CSS 3</li>
+                        <li>JavaScript & OOPS Concept</li>
+                        <li>User Interface & Frontend</li>
+                        <li>Blog & Content Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- BCA 4th Semester -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden h-auto min-h-[500px]">
+                <img src="assets/pexels-mikhail-nilov-7988747_7_11zon.webp" alt="BCA 4th Semester" class="w-full h-64 object-cover">
+                <div class="p-8 space-y-6">
+                    <h3 class="text-lg font-semibold">BCA 4th Semester</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-4 text-xs">
+                        <li>Logical Thinking</li>
+                        <li>Node.js & PHP / Laravel</li>
+                        <li>Database Management System</li>
+                        <li>Dev Tools (Docker, GitHub, Kubernetes, AWS, GCP & Azure)</li>
+                        <li>API Development & Implementation</li>
+                        <li>Website Creation & Off-Page SEO</li>
+                        <li>Assignment + Exam</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BCA 5th Semester -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden h-auto min-h-[500px]">
+                <img src="assets/pexels-pixabay-276452_12_11zon.webp" alt="BCA 5th Semester" class="w-full h-64 object-cover">
+                <div class="p-8 space-y-6">
+                    <h3 class="text-lg font-semibold">BCA 5th Semester</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-4">
+                        <li>Business Intelligence</li>
+                        <li>Client-Server Computing</li>
+                        <li>Design and Analysis of the Algorithm</li>
+                        <li>Cloud Computing</li>
+                        <li>Introduction to Soft Computing</li>
+                        <li>Bookmarking & Domain</li>
+                        <li>Full-Stack Development</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BCA 6th Semester -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden h-auto min-h-[500px]">
+                <img src="assets/pexels-tranmautritam-326514_4_11zon_13_11zon.webp" alt="BCA 6th Semester" class="w-full h-64 object-cover">
+                <div class="p-8 space-y-6">
+                    <h3 class="text-lg font-semibold">BCA 6th Semester</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-4">
+                        <li>Blog Optimization & Internal Linking</li>
+                        <li>Internal Linking & Page Speed Test</li>
+                        <li>Industry-Level Projects</li>
+                        <li>Exam</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Main Container -->
+     <div class="max-w-7xl mx-auto p-6">
+
+        <!-- SkillPresent and Additional Advantages -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold">Skillyards SkillPresent?</h2>
+                <ul class="mt-2 list-disc pl-5 text-gray-700 text-xs">
+                    <li>Technical Search Engine Optimization (SEO)</li>
+                    <li>How does Artificial Intelligence work in websites</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold">Additional Advantages</h2>
+                <ul class="mt-2 list-disc pl-5 text-gray-700 text-xs">
+                    <li>6 months paid internship as a Junior Developer Intern</li>
+                    <li>Stipend of up to ₹15,000/month</li>
+                    <li>Guaranteed in-house placement with a package of up to 10 LPA</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        
+        <div class="max-w-5xl mx-auto">  <!-- Increased width -->
+            <h2 class="text-2xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+            <div class="border-b-4 border-yellow-500 w-16 mx-auto mb-6"></div>
+            
+            <div class="grid grid-cols-2 gap-3 items-start">  <!-- Increased gap -->
+                <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base flex-auto">  <!-- Increased padding and shadow -->
+                    <details class="group">
+                        <summary class=" text-sm cursor-pointer flex justify-between items-center p-3 rounded">
+                            How is the Skillyards On-The Job BCA Degree Program different from traditional BCA degrees?
+                            <span class="group-open:rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Skillyards On-The Job BCA Degree Program is different in many ways than the traditional BCA, such as practical training on client projects, unlike theory-based classroom training. Additionally, students work as Software Developer Interns with a monthly stipend of up to 15000. Upon completing their internship, they get a 100% guaranteed in-house placement with a package of up to 10 LPA as a Software Developer before graduation.
+                        </p>
+                    </details>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base flex-auto">
+                    <details class="group">
+                        <summary class="text-sm  cursor-pointer flex justify-between items-center p-3 rounded">
+                            Are there any scholarship opportunities available?
+                            <span class="group-open:rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Students get a scholarship of up to 70% based on their practical knowledge to help them easily pay the fees.
+                        </p>
+                    </details>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base w-full">
+                    <details class="group">
+                        <summary class="text-sm  cursor-pointer flex justify-between items-center p-3 rounded">
+                            Is EMI available in the On-The Job BCA Degree Program?
+                            <span class="group-open:rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Yes, the On-The-Job BCA Program offers an EMI option so that students won’t feel pressured to pay the program fees all at once.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="bg-animated text-white py-16 px-6 relative overflow-hidden mt-10">
+            <!-- Particle Background Layer -->
+            <div id="particle-bg" class="absolute inset-0 opacity-20 pointer-events-none"></div>
+    
+            <div class="container mx-auto grid md:grid-cols-4 gap-8 relative z-10">
+                <!-- Skillyards Column -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-purple-300 mb-4 transform transition-all hover:text-purple-200">
+                        Skillyards
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Empowering the next generation of developers with cutting-edge training and education.
+                    </p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex space-x-6 mt-6">
+                        <a href="#" class="social-icon text-blue-400 transform transition-all duration-300 hover:text-blue-200">
+                            <i data-feather="facebook" class="w-8 h-8"></i>
+                        </a>
+                        <a href="#" class="social-icon text-sky-400 transform transition-all duration-300 hover:text-sky-200">
+                            <i data-feather="twitter" class="w-8 h-8"></i>
+                        </a>
+                        <a href="#" class="social-icon text-pink-400 transform transition-all duration-300 hover:text-pink-200">
+                            <i data-feather="instagram" class="w-8 h-8"></i>
+                        </a>
+                        <a href="#" class="social-icon text-blue-600 transform transition-all duration-300 hover:text-blue-300">
+                            <i data-feather="linkedin" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Training Programs Column -->
+                <div>
+                    <h4 class="text-xl font-semibold text-purple-300 mb-6">Training Programs</h4>
+                    <ul id="training-programs" class="space-y-4">
+                        <li class="program-item text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            Full-Stack Foundation Program
+                        </li>
+                        <li class="program-item text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            Full-Stack Development Program
+                        </li>
+                        <li class="program-item text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            Front-End Development Program
+                        </li>
+                        <li class="program-item text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            Back-End Development Program
+                        </li>
+                        <li class="program-item text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            UI/UX Designing Program
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Degree Programs Column -->
+                <div>
+                    <h4 class="text-xl font-semibold text-purple-300 mb-6">Degree Programs</h4>
+                    <ul class="space-y-4">
+                        <li class="text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            BCA Degree Program
+                        </li>
+                        <li class="text-gray-300 text-sm glowing-border py-2 px-3 rounded-lg cursor-pointer hover:bg-purple-900/30">
+                            MCA Degree Program
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Us Column -->
+                <div>
+                    <h4 class="text-xl font-semibold text-purple-300 mb-6">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 text-gray-300 text-sm glowing-border p-3 rounded-lg group">
+                            <i data-feather="map-pin" class="w-6 h-6 text-purple-400 group-hover:scale-110 transition duration-300"></i>
+                            <span>Head Office: OC 840-841, Gaur City Centre, Greater Noida</span>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 text-gray-300 text-sm glowing-border p-3 rounded-lg group">
+                            <i data-feather="map-pin" class="w-10 h-10 text-purple-400 group-hover:scale-110 transition duration-300"></i>
+                            <span>Branch Office: D-24, Gailana Rd, behind St. Conrad's School, Nirbhay Nagar, Agra, Uttar Pradesh 282007</span>
+                        </div>
+    
+                        <div class="flex items-start space-x-4 text-gray-300 text-sm glowing-border p-3 rounded-lg group">
+                            <i data-feather="phone" class="w-6 h-6 text-purple-400 group-hover:scale-110 transition duration-300"></i>
+                            <span>+91 7060100561-62-63</span>
+                        </div>
+                        <div class="flex items-start space-x-4 text-gray-300 text-sm glowing-border p-3 rounded-lg group">
+                            <i data-feather="mail" class="w-6 h-6 text-purple-400 group-hover:scale-110 transition duration-300"></i>
+                            <span>info@skillyards.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="mt-12 pt-6 border-t border-purple-700/30 text-center relative z-10 ">
+                <div id="copyright" class="text-sm text-gray-400 animate-pulse">
+                    © 2025 Skillyards. All rights reserved. 
+                </div>
+                <div class="text-xs mt-2 text-gray-500">
+                    Made by SN Digitech
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
