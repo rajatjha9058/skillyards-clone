@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="Home.css">
 </head>
 <body class="font-sans">
+
+
+
+
+
+
+
+
+
     <!-- Top Bar -->
     <header class="bg-gray-800 text-white py-1 px-4">
         <div class="container mx-auto flex justify-end items-center space-x-4 text-sm">
@@ -54,12 +63,12 @@
                         OJT <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                     </a>
                     <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded-md w-64 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Full-Stack Foundation</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Full-Stack Development</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Front-End Development</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Back-End Development</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">UI/UX Designing Program</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Advanced Digital Marketing Program</a>
+                        <a href="Full-Stack Foundation.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Full-Stack Foundation</a>
+                        <a href="Full-Stack Development.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Full-Stack Development</a>
+                        <a href="Front-End Development.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Front-End Development</a>
+                        <a href="Back-End Development.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Back-End Development</a>
+                        <a href="UI-UX Designing Program.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">UI/UX Designing Program</a>
+                        <a href="Advanced Digital Marketing Program.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-200">Advanced Digital Marketing Program</a>
                     </div>
                 </div>
                 
@@ -100,12 +109,12 @@
                     OJT <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="hidden pl-4 mobile-dropdown-menu">
-                    <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Full-Stack Foundation</a>
-                    <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Full-Stack Development</a>
-                    <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Front-End Development</a>
-                    <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Back-End Development</a>
-                    <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">UI/UX Designing Program</a>
-                    <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Advanced Digital Marketing Program</a>
+                    <a href="Full-Stack Foundation.html" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Full-Stack Foundation</a>
+                    <a href="Full-Stack Development.html" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Full-Stack Development</a>
+                    <a href="Front-End Development.html" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Front-End Development</a>
+                    <a href="Back-End Development.html" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Back-End Development</a>
+                    <a href="UI-UX Designing Program.html" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">UI/UX Designing Program</a>
+                    <a href="Advanced Digital Marketing Program.html" class="block px-3 py-2 hover:bg-gray-100 rounded-md transition duration-200">Advanced Digital Marketing Program</a>
                 </div>
                 
                 <button class="mobile-dropdown-toggle flex justify-between w-full px-3 py-2 font-medium hover:bg-gray-100 rounded-md transition duration-200">
@@ -128,6 +137,73 @@
 
     <!-- Hero Section with Enhanced Swiper Slider -->
     <main>
+
+
+
+        
+
+
+
+
+        <div id="career-modal" class="fixed inset-0 z-[100] flex items-center justify-center modal-overlay hidden">
+            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 p-8 relative border-t-4 border-yellow-500">
+                <!-- Close Button -->
+                <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- Modal Content -->
+                <div class="text-center">
+                    <img src="./assets/front_weblogo.webp" alt="Skillyards Logo" class="mx-auto mb-5 h-14">
+                    
+                    <h2 class="text-2xl font-bold mb-3 text-gray-800">Transform Your Career</h2>
+                    <p class="mb-6 text-sm text-gray-600">Get personalized guidance from industry experts</p>
+
+                    <!-- Career Guidance Form -->
+                    <form id="career-form" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Name" required 
+                                class="w-full p-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition duration-300">
+                            <input type="email" placeholder="Email" required 
+                                class="w-full p-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition duration-300">
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="tel" placeholder="Phone" required 
+                                class="w-full p-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition duration-300">
+                            <select required 
+                                class="w-full p-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition duration-300">
+                                <option value="">Select Program</option>
+                                <option>Data Science</option>
+                                <option>Digital Marketing</option>
+                                <option>Software Engineering</option>
+                            </select>
+                        </div>
+                        
+                        <input type="text" placeholder="Location" required 
+                            class="w-full p-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition duration-300">
+                        
+                        <textarea placeholder="Message" 
+                            class="w-full p-3 text-sm border border-gray-300 rounded-lg h-24 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition duration-300"></textarea>
+                        
+                        <button type="submit" 
+                            class="w-full bg-yellow-500 text-black py-3 text-sm rounded-lg hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                            Start Your Career Journey Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
         <section class="relative">
             <div class="swiper heroSwiper h-[600px]">
                 <div class="swiper-wrapper">
@@ -1054,7 +1130,7 @@
             Frequently Asked Questions
         </h2>
         
-        <div class="faq-grid grid md:grid-cols-3 gap-8">
+        <div class="faq-grid grid md:grid-cols-4 gap-8">
             <!-- Left Column with Two FAQs -->
             <div class="md:col-span-2 space-y-8">
                 <!-- FAQ Item 1 -->
@@ -1070,12 +1146,8 @@
                         </button>
                         <div class="faq-content hidden p-6 bg-yellow-50 text-gray-700">
                             <p class="leading-relaxed bg-gradient-to-r from-yellow-100 to-yellow-200 p-5 rounded-lg text-base">
-                                Strategies to get placed as a Developer:
-                                • Build a compelling portfolio of projects
-                                • Participate in coding competitions
-                                • Gain practical internship experience
-                                • Master in-demand programming languages
-                                • Network with industry professionals
+                                Who wouldn't want to get a well-paying, safe, and AI-proof job before they graduate? Correct? This is why we offer our On-The Job BCA Degree Program, where you will earn a degree from a UGC Certified A+ Grade University along with practical training on client projects, a paid internship as a Junior Developer Intern with a stipend of up to 15,000 per month, and a 100% guaranteed job as a Developer in our own company with a package of up to 10 LPA before you graduate!
+
                             </p>
                         </div>
                     </div>
@@ -1086,7 +1158,7 @@
                     <div class="bg-white rounded-xl shadow-lg h-full overflow-hidden border-l-4 border-transparent hover:border-amber-500 transition-all duration-300">
                         <button class="faq-toggle w-full text-left p-6 flex justify-between items-center hover:bg-yellow-50 focus:outline-none transition-colors duration-200">
                             <span class="font-bold text-xl text-gray-800 group-hover:text-amber-600 transition-colors duration-200">
-                                Securing a career in software development during graduation
+                                What networking and professional development opportunities do Skillyards offer?
                             </span>
                             <svg class="w-8 h-8 text-gray-500 group-hover:text-amber-500 transform transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -1094,12 +1166,8 @@
                         </button>
                         <div class="faq-content hidden p-6 bg-yellow-50 text-gray-700">
                             <p class="leading-relaxed bg-gradient-to-r from-yellow-100 to-yellow-200 p-5 rounded-lg text-base">
-                                Career development strategies:
-                                • Start learning programming early
-                                • Choose relevant academic electives
-                                • Engage in online courses and certifications
-                                • Contribute to open-source projects
-                                • Develop both technical and soft skills
+                                Skillyards isn't only about training but being a bunch of passionate people in the field. Through the Skillyards Club Facilitation, students will have the chance to participate in networking activities, personality development, public speaking, leadership skills & English language fluency sessions by industry leaders.
+
                             </p>
                         </div>
                     </div>
@@ -1107,13 +1175,13 @@
             </div>
 
             <!-- Right Column with One FAQ -->
-            <div class="md:col-span-1 space-y-8">
+            <div class="md:col-span-2 space-y-8">
                 <!-- FAQ Item 3 -->
                 <div class="faq-item group animate-fade-in delay-400">
                     <div class="bg-white rounded-xl shadow-lg h-full overflow-hidden border-l-4 border-transparent hover:border-orange-500 transition-all duration-300">
                         <button class="faq-toggle w-full text-left p-6 flex justify-between items-center hover:bg-yellow-50 focus:outline-none transition-colors duration-200">
                             <span class="font-bold text-xl text-gray-800 group-hover:text-orange-600 transition-colors duration-200">
-                                Networking and professional development opportunities
+                                “I’m pursuing my graduation right now but have an interest in the software development field, how can I secure a good career in the field?”
                             </span>
                             <svg class="w-8 h-8 text-gray-500 group-hover:text-orange-500 transform transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -1121,12 +1189,8 @@
                         </button>
                         <div class="faq-content hidden p-6 bg-yellow-50 text-gray-700">
                             <p class="leading-relaxed bg-gradient-to-r from-yellow-100 to-yellow-200 p-5 rounded-lg text-base">
-                                Professional development opportunities:
-                                • Expert mentorship programs
-                                • Industry networking events
-                                • Exclusive job placement support
-                                • Career counseling sessions
-                                • Skill enhancement workshops
+                                There are countless opportunities in the broad field of software development! With our Full-Stack Web Development Training Program, you can grab these opportunities by learning in-demand topics like CSS, JavaScript, OOPS Concept, and many more through hands-on training on real client projects. Following training, you will secure a paid internship with a monthly stipend of up to 15,000 in order to get experience in the field. You will have a guaranteed job in our own company with a package worth up to 5 LPA after the completion of your internship. In this manner, you'll be able to start off with a secure job at a young age, which will help you to develop experience and skills and open doors to new opportunities!.
+
                             </p>
                         </div>
                     </div>
@@ -1268,14 +1332,11 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="mt-12 pt-6 border-t border-purple-700/30 text-center relative z-10 ">
-            <div id="copyright" class="text-sm text-gray-400 animate-pulse">
-                © 2025 Skillyards. All rights reserved. 
-            </div>
-            <div class="text-xs mt-2 text-gray-500">
-                Made by SN Digitech
-            </div>
+        <div class="mt-8 pt-4 border-t border-gray-700 flex justify-between items-center">
+            <p class="text-gray-400 hover:text-white transition-colors">Made by SN Digitech</p>
+            <p class="text-gray-400 hover:text-white transition-colors">© 2025 Skillyards. All rights reserved.</p>
         </div>
+
     </footer>
 
 

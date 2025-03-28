@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best UI/UX Design Training In Agra </title>
+    <link rel="stylesheet" href="import.css">
+    <script src="import.js"></script>
+</head>
+
+<style>
+    .faq-item {
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+</style>
+<body>
+    
+
+        <!-- Hero Section -->
+        <div class="relative w-full h-[400px] bg-black">
+            <img src="https://www.skillyards.com/Web_logo/Background/UIUX.png" alt="Full-Stack Training"
+                class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <h1 class="text-white text-4xl md:text-5xl font-bold text-center">
+                    UI/UX Design Training In Agra 
+                </h1>
+            </div>
+        </div>
+    
+
+       
+
+        <section class="max-w-6xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden mt-20">
+            <div class="p-8">
+                <h1 class="text-4xl font-bold text-orange-500 mb-4 text-center">
+                    UI/UX Design Training Program
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 text-center">
+                    Duration: <span class="font-semibold">6 Months Training + 3 Months Internship</span>
+                </p>
+    
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Course Modules -->
+                    <div class="lg:col-span-2">
+                        <div class="space-y-4" id="course-modules">
+                            <!-- Modules will be dynamically added here -->
+                        </div>
+                    </div>
+    
+                    <!-- Image Gallery -->
+                    <div>
+                        <div class="grid grid-cols-2 gap-4" id="module-image-gallery">
+                            <img src="https://www.synapseindia.com/assets_newwebsite/images/banner_UI-UX.jpg" 
+                                 class="gallery-image rounded-lg shadow-md object-cover h-44 w-full transform hover:scale-105 transition duration-300 cursor-pointer" 
+                                 alt="UI/UX Wireframing">
+                            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 class="gallery-image rounded-lg shadow-md object-cover h-44 w-full transform hover:scale-105 transition duration-300 cursor-pointer" 
+                                 alt="Design Prototyping">
+                            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 class="gallery-image rounded-lg shadow-md object-cover h-44 w-full transform hover:scale-105 transition duration-300 cursor-pointer" 
+                                 alt="User Experience Design">
+                            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                 class="gallery-image rounded-lg shadow-md object-cover h-44 w-full transform hover:scale-105 transition duration-300 cursor-pointer" 
+                                 alt="Design Tools">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Module Template -->
+        <template id="module-template">
+            <div class="module-card border-2 border-orange-100 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-orange-300">
+                <button class="module-toggle w-full p-4 text-left flex items-center justify-between bg-orange-50 hover:bg-orange-100 group">
+                    <div class="flex items-center">
+                        <div class="icon-container w-12 h-12 mr-4 bg-orange-100 rounded-full flex items-center justify-center shadow-md transition-all duration-300 group-hover:bg-orange-200 group-hover:shadow-lg">
+                            <i class="module-icon text-2xl text-orange-500 group-hover:text-orange-700"></i>
+                        </div>
+                        <span class="module-title font-semibold text-gray-800 text-lg group-hover:text-orange-700 transition-colors duration-300">Module Title</span>
+                    </div>
+                    <div class="toggle-icon-container w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center shadow-md transition-all duration-300 group-hover:bg-orange-200 group-hover:shadow-lg">
+                        <svg class="toggle-icon w-6 h-6 text-orange-500 group-hover:text-orange-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="module-content hidden p-4 bg-orange-50/50">
+                    <div class="flex items-start">
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-semibold text-orange-700 mb-2">What You'll Learn</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                <!-- Dynamic list items will be inserted here -->
+                            </ul>
+                        </div>
+                        <div class="ml-4">
+                            <span class="badge inline-block px-3 py-1 rounded-full text-sm">
+                                Badge
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-4 border-t border-orange-100 pt-3 text-sm text-gray-500">
+                        <strong>Estimated Duration:</strong> <span class="duration">X-Y Months</span>
+                    </div>
+                </div>
+            </div>
+        </template>
+    
+        <!-- Modal for Image Gallery -->
+        <div id="image-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+            <div class="relative max-w-4xl mx-auto">
+                <img id="modal-image" src="" alt="Enlarged Image" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl">
+                <button id="close-modal" class="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300">&times;</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="container mx-auto px-4 max-w-6xl mt-20">
+            <h2 class="text-4xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600">
+                Frequently Asked Questions
+            </h2>
+            
+            <div class="faq-grid grid md:grid-cols-4 gap-8">
+                <!-- Left Column with Two FAQs -->
+                <div class="md:col-span-2 space-y-8">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item group animate-fade-in">
+                        <div class="bg-white rounded-xl shadow-lg h-full overflow-hidden border-l-4 border-transparent hover:border-yellow-500 transition-all duration-300">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center hover:bg-yellow-50 focus:outline-none transition-colors duration-200">
+                                <span class="font-bold text-xl text-gray-800 group-hover:text-yellow-600 transition-colors duration-200">
+                                    Is EMI available in the UI/UX Design Training Program?
+                                </span>
+                                <svg class="w-8 h-8 text-gray-500 group-hover:text-yellow-500 transform transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden p-6 bg-yellow-50 text-gray-700">
+                                <p class="leading-relaxed bg-gradient-to-r from-yellow-100 to-yellow-200 p-5 rounded-lg text-base">
+                                    Yes, EMI option is available in the UI/UX Design Training Program so that the students do not feel the need to submit the program fees in one go.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item group animate-fade-in delay-200">
+                        <div class="bg-white rounded-xl shadow-lg h-full overflow-hidden border-l-4 border-transparent hover:border-amber-500 transition-all duration-300">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center hover:bg-yellow-50 focus:outline-none transition-colors duration-200">
+                                <span class="font-bold text-xl text-gray-800 group-hover:text-amber-600 transition-colors duration-200">
+                                    What softwares will I be trained on in the UI/UX Design Training Program?
+                                </span>
+                                <svg class="w-8 h-8 text-gray-500 group-hover:text-amber-500 transform transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden p-6 bg-yellow-50 text-gray-700">
+                                <p class="leading-relaxed bg-gradient-to-r from-yellow-100 to-yellow-200 p-5 rounded-lg text-base">
+                                    In the UI/UX Design Training Program, you will learn how to use Figma, Protopie, Notion, and other premium software applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right Column with One FAQ -->
+                <div class="md:col-span-2 space-y-8">
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item group animate-fade-in delay-400">
+                        <div class="bg-white rounded-xl shadow-lg h-full overflow-hidden border-l-4 border-transparent hover:border-orange-500 transition-all duration-300">
+                            <button class="faq-toggle w-full text-left p-6 flex justify-between items-center hover:bg-yellow-50 focus:outline-none transition-colors duration-200">
+                                <span class="font-bold text-xl text-gray-800 group-hover:text-orange-600 transition-colors duration-200">
+                                    On what type of projects will I work on in the UI/UX Design Training Program?
+                                </span>
+                                <svg class="w-8 h-8 text-gray-500 group-hover:text-orange-500 transform transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden p-6 bg-yellow-50 text-gray-700">
+                                <p class="leading-relaxed bg-gradient-to-r from-yellow-100 to-yellow-200 p-5 rounded-lg text-base">
+                                    You will get to work on real-world client projects such as designing mobile applications, website designing, and more!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        
+
+
+    <script>
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+            const modules = [
+                {
+                    title: 'Introduction to UI/UX Design',
+                    icon: 'fa-lightbulb',
+                    color: 'amber',
+                    badge: 'Fundamentals',
+                    duration: '2 Weeks',
+                    contents: [
+                        'Design principles',
+                        'UI/UX design overview',
+                        'Design thinking process',
+                        'Career pathways'
+                    ]
+                },
+                {
+                    title: 'Design Tools & Software',
+                    icon: 'fa-laptop',
+                    color: 'sky',
+                    badge: 'Technical Skills',
+                    duration: '1 Month',
+                    contents: [
+                        'Figma basics',
+                        'Adobe XD',
+                        'Sketch',
+                        'Prototyping tools'
+                    ]
+                },
+                {
+                    title: 'User Research',
+                    icon: 'fa-users',
+                    color: 'emerald',
+                    badge: 'Research Techniques',
+                    duration: '1 Month',
+                    contents: [
+                        'Interviews',
+                        'Surveys',
+                        'Usability testing',
+                        'User insights'
+                    ]
+                },
+                {
+                    title: 'Information Architecture',
+                    icon: 'fa-sitemap',
+                    color: 'violet',
+                    badge: 'Structural Design',
+                    duration: '3 Weeks',
+                    contents: [
+                        'User flows',
+                        'Site mapping',
+                        'Navigation design',
+                        'Content organization'
+                    ]
+                },
+                {
+                    title: 'Wireframing & Prototyping',
+                    icon: 'fa-drafting-compass',
+                    color: 'indigo',
+                    badge: 'Visual Design',
+                    duration: '1 Month',
+                    contents: [
+                        'Low-fidelity wireframes',
+                        'High-fidelity prototypes',
+                        'Interactive design',
+                        'Design systems'
+                    ]
+                },
+                {
+                    title: 'UI Design Principles',
+                    icon: 'fa-palette',
+                    color: 'rose',
+                    badge: 'Design Mastery',
+                    duration: '3 Weeks',
+                    contents: [
+                        'Color theory',
+                        'Typography',
+                        'Layout design',
+                        'Visual hierarchy'
+                    ]
+                },
+                {
+                    title: 'User Experience Design',
+                    icon: 'fa-universal-access',
+                    color: 'teal',
+                    badge: 'User-Centric',
+                    duration: '1 Month',
+                    contents: [
+                        'Accessibility',
+                        'Interaction design',
+                        'User psychology',
+                        'Empathy mapping'
+                    ]
+                },
+                {
+                    title: 'Portfolio & Internship Prep',
+                    icon: 'fa-briefcase',
+                    color: 'red',
+                    badge: 'Career Ready',
+                    duration: '2 Weeks',
+                    contents: [
+                        'Portfolio creation',
+                        'Case studies',
+                        'Interview preparation',
+                        'Industry networking'
+                    ]
+                },
+                {
+                    title: 'Internship',
+                    icon: 'fa-chart-line',
+                    color: 'green',
+                    badge: 'Professional Experience',
+                    duration: '3 Months',
+                    contents: [
+                        'Real-world projects',
+                        'Industry mentorship',
+                        'Professional environment',
+                        'Career development'
+                    ]
+                }
+            ];
+
+            const modulesContainer = document.getElementById('course-modules');
+            const moduleTemplate = document.getElementById('module-template');
+
+            modules.forEach(module => {
+                const moduleClone = document.importNode(moduleTemplate.content, true);
+                const moduleCard = moduleClone.querySelector('.module-card');
+                
+                // Set icon
+                const iconElement = moduleCard.querySelector('.module-icon');
+                iconElement.className = `module-icon text-2xl text-${module.color}-500 group-hover:text-${module.color}-700 fas ${module.icon}`;
+                
+                // Set border and background colors dynamically
+                moduleCard.className = `module-card border-2 border-${module.color}-100 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-${module.color}-300`;
+                
+                // Update other module details
+                moduleCard.querySelector('.module-title').textContent = module.title;
+                moduleCard.querySelector('.module-toggle').className = `module-toggle w-full p-4 text-left flex items-center justify-between bg-${module.color}-50 hover:bg-${module.color}-100 group`;
+                moduleCard.querySelector('.module-content').className = `module-content hidden p-4 bg-${module.color}-50/50`;
+                
+                // Update list items
+                const contentsList = moduleCard.querySelector('ul');
+                contentsList.innerHTML = module.contents.map(content => 
+                    `<li>${content}</li>`
+                ).join('');
+
+                // Update badge
+                const badge = moduleCard.querySelector('.badge');
+                badge.textContent = module.badge;
+                badge.className = `badge inline-block px-3 py-1 rounded-full text-sm bg-${module.color}-100 text-${module.color}-700`;
+
+                // Update duration
+                moduleCard.querySelector('.duration').textContent = module.duration;
+
+                // Add toggle functionality
+                const toggleButton = moduleCard.querySelector('.module-toggle');
+                const content = moduleCard.querySelector('.module-content');
+                const contentToggleIcon = moduleCard.querySelector('.toggle-icon');
+
+                toggleButton.addEventListener('click', () => {
+                    content.classList.toggle('hidden');
+                    
+                    if (content.classList.contains('hidden')) {
+                        contentToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>';
+                    } else {
+                        contentToggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>';
+                    }
+                });
+
+                modulesContainer.appendChild(moduleCard);
+            });
+
+            // Image Gallery Modal Logic
+            const galleryImages = document.querySelectorAll('.gallery-image');
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            const closeModalBtn = document.getElementById('close-modal');
+
+            galleryImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    modalImage.src = img.src;
+                    modalImage.alt = img.alt;
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+   
+
+
+
+
+
+
+
+
+
+
+
+
+         // FAQ Toggle Functionality
+ document.querySelectorAll('.faq-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('svg');
+        const parentItem = toggle.closest('.faq-item');
+        
+        // Toggle content and icon
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+
+        // Add interaction effects
+        if (!content.classList.contains('hidden')) {
+            parentItem.classList.add('ring-2', 'ring-yellow-300');
+        } else {
+            parentItem.classList.remove('ring-2', 'ring-yellow-300');
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

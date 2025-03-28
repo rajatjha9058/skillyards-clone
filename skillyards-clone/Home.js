@@ -2,6 +2,52 @@
 
 
 
+    // Add modal functionality to the existing script
+    document.addEventListener('DOMContentLoaded', function() {
+        
+
+        // Add modal functionality
+        const modal = document.getElementById('career-modal');
+        const closeBtn = document.getElementById('close-modal');
+        const form = document.getElementById('career-form');
+
+        // Function to show modal
+        function showModal() {
+            modal.classList.remove('hidden');
+        }
+
+        // Close modal functionality
+        closeBtn.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+
+        // Form submission handler
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const inputs = form.querySelectorAll('input, select, textarea');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+
+            if (isValid) {
+                // You might want to replace this with actual form submission logic
+                alert('Form submitted successfully! Our team will contact you soon.');
+                modal.classList.add('hidden');
+            }
+        });
+
+        // Optional: Show modal after a delay or on specific events
+        showModal();
+    });
 
 
 
@@ -609,38 +655,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  // Adjust animation speed based on screen width
-  function adjustSpeed() {
-    const logoSlides = document.querySelectorAll('.logos-slide');
-    const speed = window.innerWidth < 768 ? '30s' : '40s';
-    
-    logoSlides.forEach(slide => {
-      slide.style.animationDuration = speed;
-    });
-  }
-  
-  // Run on load and resize
-  window.addEventListener('load', adjustSpeed);
-  window.addEventListener('resize', adjustSpeed);
-  
-  // Pause animation when not in viewport for better performance
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const logosSlide = entry.target.querySelector('.logos-slide');
-      if (logosSlide) {
-        if (entry.isIntersecting) {
-          logosSlide.style.animationPlayState = 'running';
-        } else {
-          logosSlide.style.animationPlayState = 'paused';
-        }
-      }
-    });
-  }, {threshold: 0.1});
-  
-  document.querySelectorAll('.logos-container').forEach(container => {
-    observer.observe(container);
-  });
 
+ // Adjust animation speed based on screen width
+ function adjustLogoAnimationSpeed() {
+    const partnerLogoSlides = document.querySelectorAll('.logos-slide');
+    const animationDuration = window.innerWidth < 768 ? '30s' : '40s';
+    
+    partnerLogoSlides.forEach(logoSlideElement => {
+        logoSlideElement.style.animationDuration = animationDuration;
+    });
+}
+
+// Pause logo items when hovered
+function configureLogoHoverInteractions() {
+    const partnerLogoItems = document.querySelectorAll('.logo-item');
+    
+    partnerLogoItems.forEach(logoItemElement => {
+        logoItemElement.addEventListener('mouseenter', () => {
+            const parentLogoSlide = logoItemElement.closest('.logos-slide');
+            if (parentLogoSlide) {
+                parentLogoSlide.style.animationPlayState = 'paused';
+            }
+        });
+        
+        logoItemElement.addEventListener('mouseleave', () => {
+            const parentLogoSlide = logoItemElement.closest('.logos-slide');
+            if (parentLogoSlide) {
+                parentLogoSlide.style.animationPlayState = 'running';
+            }
+        });
+    });
+}
+
+// Pause animation when not in viewport for better performance
+const logoSliderViewportObserver = new IntersectionObserver((observerEntries) => {
+    observerEntries.forEach(observerEntry => {
+        const logoSlideElement = observerEntry.target.querySelector('.logos-slide');
+        if (logoSlideElement) {
+            if (observerEntry.isIntersecting) {
+                logoSlideElement.style.animationPlayState = 'running';
+            } else {
+                logoSlideElement.style.animationPlayState = 'paused';
+            }
+        }
+    });
+}, {threshold: 0.1});
+
+// Run on load and resize
+window.addEventListener('load', () => {
+    adjustLogoAnimationSpeed();
+    configureLogoHoverInteractions();
+    document.querySelectorAll('.logos-container').forEach(containerElement => {
+        logoSliderViewportObserver.observe(containerElement);
+    });
+});
+
+window.addEventListener('resize', adjustLogoAnimationSpeed);
 
 
 
