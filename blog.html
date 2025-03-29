@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Blog Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="importNavbar.js"></script>
+    <link rel="stylesheet" href="import.css">
+</head>
+<body class="bg-gray-100 ">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4">Recent Blog Posts</h2>
+
+        <!-- Form to Add New Blog -->
+        <div class="mb-6 bg-white p-6 shadow-lg rounded-lg">
+            <h3 class="text-lg font-bold mb-4">Add a New Blog Post</h3>
+            <form id="blog-form">
+                <label class="block text-sm font-medium text-gray-700">Blog Image</label>
+                <input type="file" id="blog-image" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                
+                <label class="block text-sm font-medium text-gray-700 mt-4">Title</label>
+                <input type="text" id="blog-title" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2">
+                
+                <label class="block text-sm font-medium text-gray-700 mt-4">Summary</label>
+                <textarea id="blog-summary" class="mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"></textarea>
+                
+                <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+            </form>
+        </div>
+
+        <!-- Blog Container -->
+        <div id="blog-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- New blogs will be added here dynamically -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("blog-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const title = document.getElementById("blog-title").value;
+            const summary = document.getElementById("blog-summary").value;
+            const imageInput = document.getElementById("blog-image");
+            const imageUrl = imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : "image-placeholder.jpg";
+            
+            if (title && summary) {
+                const blogContainer = document.getElementById("blog-container");
+                const newBlog = document.createElement("div");
+                newBlog.classList.add("bg-white", "shadow-lg", "rounded-lg", "overflow-hidden");
+                newBlog.innerHTML = `
+                    <img src="${imageUrl}" alt="Blog Image" class="w-full h-52 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">${title}</h3>
+                        <p class="text-gray-600 mt-2">${summary}</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">New Blog</span>
+                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                        </div>
+                    </div>
+                `;
+                blogContainer.appendChild(newBlog);
+                
+                // Clear the form after submission
+                document.getElementById("blog-form").reset();
+            }
+        });
+    </script>
+  
+
+
+
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6">Recent Blog Posts</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-20">
+        <!-- Blog Post 1 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="relative group">
+                <img src="assets/1739424325920_Digital Marketing in Agra Addressing Common SEO .jpg" 
+                     alt="Blog Image" 
+                     class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Digital Marketing in Agra: Addressing Common SEO Issues</h3>
+                <p class="text-gray-600 mt-2">An overview of SEO challenges and solutions with expert training.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Blog Post 2 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="relative group">
+                <img src="assets/1739356357114_Top 5 Most Popular Full-Stack Frameworks for Web Development.jpg" 
+                     alt="Blog Image" 
+                     class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Top 5 Most Popular Full-Stack Frameworks for Web Development</h3>
+                <p class="text-gray-600 mt-2">Explore the best frameworks for modern web development.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">full-stack-web-development</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Blog Post 3 -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="relative group">
+                <img src="assets/1739352086696_Finding the Best Digital Marketing Institute in Agra - Copy.jpg" 
+                     alt="Blog Image" 
+                     class="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Finding the Best Digital Marketing Institute in Agra</h3>
+                <p class="text-gray-600 mt-2">A guide to choosing the right institute for your career.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="max-w-[95%] mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6">Blog Categories</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6">
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">All-Category</button>
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">Digital Marketing</button>
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">UI/UX Designing</button>
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">Full-Stack Web Development</button>
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">Cybersecurity</button>
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">Degree</button>
+        <button class="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:text-blue-600">Communication Skills</button>
+    </div>
+</div>
+
+
+
+
+<div class="max-w-[95%] mx-auto px-4 my-5">
+    <h2 class="text-3xl font-bold mb-6">Filtered Blogs</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Blog Card 1 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1739424325920_Digital Marketing in Agra Addressing Common SEO  (1).jpg" alt="Blog Image" class="w-full h-52 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Digital Marketing in Agra: Addressing Common SEO Issues</h3>
+                <p class="text-gray-600 mt-2">An overview of SEO challenges and solutions with expert training.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1739359375279_Exploring the Best Full-Stack.jpg" alt="Blog Image" class="w-full h-52 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Exploring the Best Full-Stack Framework: MERN Stack</h3>
+                <p class="text-gray-600 mt-2">Discover why the MERN stack is one of the most popular choices.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">full-stack-web-development</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1739356357114_Top 5 Most Popular Full-Stack Frameworks for Web Development.jpg" alt="Blog Image" class="w-full h-52 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Top 5 Most Popular Full-Stack Frameworks for Web Development</h3>
+                <p class="text-gray-600 mt-2">Explore the best frameworks for modern web development.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">full-stack-web-development</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 4 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1739352086696_Finding the Best Digital Marketing Institute in Agra.jpg" alt="Blog Image" class="w-full h-52 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Finding the Best Digital Marketing Institute in Agra</h3>
+                <p class="text-gray-600 mt-2">A guide to choosing the right institute for your career.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 5 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1739342975808_Explore the Best Free Marketing Certifications.jpg" alt="Blog Image" class="w-full h-52 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Explore the Best Free Marketing Certifications</h3>
+                <p class="text-gray-600 mt-2">A list of free courses for aspiring digital marketers.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 6 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1738050434970_Common SEO Problems, Web Crawlers, and.jpg" alt="Blog Image" class="w-full h-52 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Common SEO Problems, Web Crawlers, and More</h3>
+                <p class="text-gray-600 mt-2">How conversational SEO is shaping the future.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="max-w-[95%] mx-auto px-4">
+    <!-- <h2 class="text-3xl font-bold mb-6">Filtered Blogs</h2> -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Blog Card 1 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1737975430010_Unlocking Success in Tech and Marketing.jpg" alt="Blog Image" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Unlocking Success in Tech and Marketing</h3>
+                <p class="text-gray-600 mt-2">A deep dive into full-stack frameworks and certifications.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1737538429527_Enhancing Your Digital Skills From Automation .jpg" alt="Blog Image" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Enhancing Your Digital Skills: From Automation</h3>
+                <p class="text-gray-600 mt-2">How automation is shaping digital excellence in Agra.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1737537769491_Mastering MERN Stack A Guide to Full-Stack UIUX Web Design.jpg" alt="Blog Image" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Mastering MERN Stack: A Guide to UI/UX</h3>
+                <p class="text-gray-600 mt-2">Explore the best practices for web design and MERN stack development.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">full-stack-web-development</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 4 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1737436758455_Digital MArketing.jpg" alt="Blog Image" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Best Digital Marketing Resources for 2025</h3>
+                <p class="text-gray-600 mt-2">A collection of the best digital marketing courses for skill growth.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 5 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1737189443516_Conversational Marketing and SEO Solving Technical Issues and DrivingÂ Results.jpg" alt="Blog Image" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Conversational Marketing and SEO Solving</h3>
+                <p class="text-gray-600 mt-2">Technical issues and driving results with effective strategies.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">digital-marketing</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Card 6 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+            <div class="overflow-hidden">
+                <img src="assets/1737040525372_Career Options After MERN Stack Exploring Lucrative Paths in WebÂ Development.jpg" alt="Blog Image" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Career Options After MERN Stack</h3>
+                <p class="text-gray-600 mt-2">Exploring lucrative career paths in MERN stack web development.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">full-stack-web-development</span>
+                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
