@@ -1,61 +1,54 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Section</title>
+    <link rel="stylesheet" href="assets/contect.css">
+    <title></title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="import.css">
+    <script src="importNavbar.js"></script>
     <style>
-        details summary {
-            background-color: white;
-            transition: background-color 0.3s;
-        }
+        body { font-family: 'Poppins', sans-serif; }
+
+        
         details[open] summary {
             background-color: #FEF08A;
         }
+    
     </style>
 </head>
-<body class="bg-white p-10">
-    <div class="max-w-5xl mx-auto">  <!-- Increased width -->
-        <h2 class="text-2xl font-bold text-center mb-4">Frequently Asked Questions</h2>
-        <div class="border-b-4 border-yellow-500 w-16 mx-auto mb-6"></div>
+<body class="bg-gray-100">
+
+    
+    <section class=" bg-cover bg-center h-96  flex items-center justify-center  brightness-50  " style="background-image: url('assets/aboutus.png');">
+        <div class="   p-8 text-white text-center rounded-lg">
+            <h2 class="text-3xl font-extrabold">About Us</h2>
+        </div>
+    </section>
+
+
+    <div class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg h-full overflow-hidden flex flex-col md:flex-row my-20">
+        <!-- Image Section -->
+        <div class="md:w-1/2 relative group">
+            <img src="assets/aboutoffice.jpeg" alt="Office Image" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 text-white text-lg  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Skillyards is dedicated to bridging the gap between academia and industry by providing hands-on training and guaranteed placements.
+            </div>
+        </div>
         
-        <div class="grid grid-cols-2 gap-3 items-start">  <!-- Increased gap -->
-            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base flex-auto">  <!-- Increased padding and shadow -->
-                <details class="group">
-                    <summary class="font-semibold  cursor-pointer flex justify-between items-center p-3 rounded">
-                        How is the Skillyards On-The Job BCA Degree Program different from traditional BCA degrees?
-                        <span class="group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-2 text-gray-700 text-sm">
-                        Skillyards On-The Job BCA Degree Program is different in many ways than the traditional BCA, such as practical training on client projects, unlike theory-based classroom training. Additionally, students work as Software Developer Interns with a monthly stipend of up to 15000. Upon completing their internship, they get a 100% guaranteed in-house placement with a package of up to 10 LPA as a Software Developer before graduation.
-                    </p>
-                </details>
-            </div>
-            
-            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base flex-auto">
-                <details class="group">
-                    <summary class="font-semibold  cursor-pointer flex justify-between items-center p-3 rounded">
-                        Are there any scholarship opportunities available?
-                        <span class="group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-2 text-gray-700 text-sm">
-                        Students get a scholarship of up to 70% based on their practical knowledge to help them easily pay the fees.
-                    </p>
-                </details>
-            </div>
-            
-            <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-300 text-base w-full">
-                <details class="group">
-                    <summary class="font-semibold  cursor-pointer flex justify-between items-center p-3 rounded">
-                        Is EMI available in the On-The Job BCA Degree Program?
-                        <span class="group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-2 text-gray-700 text-sm">
-                        Yes, the On-The-Job BCA Program offers an EMI option so that students won’t feel pressured to pay the program fees all at once.
-                    </p>
-                </details>
-            </div>
+        <!-- Text Section -->
+        <div class="md:w-1/2 p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">About Skillyards</h2>
+            <p class="text-gray-700 text-lg mb-4">
+                Skillyards, a leader in the IT industry, aims to build an IT Ecosystem in the City of Taj, Agra by creating IT experts from scratch and offering them guaranteed In-house/ Industry placements. While doing this, Skillyards also lends a hand to fill the void between the theoretical & practical development of students, helping them to be industry-ready. Through On-The Job Degree & On-The Job Training programs, Skillyards provides practical development to students, along with working on their communication skills through regular personality development, public speaking & English language fluency activities in the Skillyards Club Facilitation. The regular client projects with professional trainers & developers combined with the regularly updated curriculum create an incomparable package of practical learning
+            </p>
+            <!-- <p class="text-gray-700 text-base mb-4">
+                While doing this, Skillyards also fills the void between theoretical & practical development of students, helping them be industry-ready.
+            </p> -->
+            <p class="text-gray-700 text-2xl">
+                So if you are looking to craft a new era of the IT industry, then skill up with Skillyards!
+            </p>
         </div>
     </div>
 </body>
